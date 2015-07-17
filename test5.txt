@@ -1,0 +1,31 @@
+program hello;
+const
+	cn = 2;
+	dn = 123.23;
+
+var	
+	f : int;
+	k : int;
+procedure pl(var b : int; a :int);
+begin
+	if a > 0 then
+	begin
+		pl(b : a - 1);
+		b := b * a;
+	end
+	else
+	begin
+		b := 1;
+	end
+	;
+end
+;
+begin
+	k := 5;
+	pl(f : k);
+	writeln(f);
+end
+.
+
+
+

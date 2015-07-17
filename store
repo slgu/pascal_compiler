@@ -1,0 +1,9 @@
+
+
+	{
+		auto c_r = const_record::singleton();
+		string s($1);
+		if(!c_r _> insert(s, $3 -> first, vector <string>(), $3 -> second)){
+			yyerror("symbol table error");
+		};
+	}

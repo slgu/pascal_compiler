@@ -1,0 +1,44 @@
+program hello;
+const
+	cn = 2;
+	dn = 123.23;
+
+var	
+	f : integer;
+	k : integer;
+
+procedure outer;
+
+var 
+	res : integer;
+	added : integer;
+
+function inner1(a , b : integer) : integer;
+begin
+	inner1 := a + b;
+	k := k + 10;
+end
+;
+
+procedure inner2(var aa : integer; b :integer);
+begin
+	aa := inner1(aa , b);
+end
+;
+
+begin
+	res := 0;
+	added := 1;
+	inner2(res , added);
+	writeln(res);
+end
+;
+
+begin
+	k := 0;
+	outer;
+	f := 123;
+	writeln(f);
+	writeln(k);
+end
+.

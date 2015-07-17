@@ -1,0 +1,35 @@
+program hello;
+const
+	cn = 2;
+	dn = 123.23;
+
+var	
+	f : int;
+	k : int;
+function gao(a : int), int;
+
+begin
+	if a > 0 then 
+		gao := a * gao(a - 1)
+	else
+		gao := 1
+	;
+	k := k + gao;
+end
+;
+
+procedure test;
+var 
+	t1 : int;
+	t2 : int;
+begin
+
+end
+;
+begin
+	k := 0;
+	f := gao(5);
+	writeln(f);
+	writeln(k);
+end
+.
